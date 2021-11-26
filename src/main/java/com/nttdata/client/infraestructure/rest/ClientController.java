@@ -38,7 +38,7 @@ public class ClientController {
     }
 
     @DeleteMapping("/{id}")
-    public  Mono<ClientDao> delete(@PathVariable String id){
+    public Mono<ClientDao> delete(@PathVariable String id){
         return clientOperations.delete(id);
     }
 

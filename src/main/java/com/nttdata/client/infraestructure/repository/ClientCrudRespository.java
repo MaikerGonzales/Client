@@ -1,6 +1,6 @@
 package com.nttdata.client.infraestructure.repository;
 
-import com.nttdata.client.application.ClientRespository;
+import com.nttdata.client.application.model.ClientRepository;
 import com.nttdata.client.domain.Client;
 import com.nttdata.client.infraestructure.model.dao.ClientDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Component
-public class ClientCrudRespository implements ClientRespository {
+public class ClientCrudRespository implements ClientRepository {
 
     @Autowired
     IClientCrudRepository repository;

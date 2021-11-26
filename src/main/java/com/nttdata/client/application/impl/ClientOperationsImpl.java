@@ -1,5 +1,7 @@
-package com.nttdata.client.application;
+package com.nttdata.client.application.impl;
 
+import com.nttdata.client.application.ClientOperations;
+import com.nttdata.client.application.model.ClientRepository;
 import com.nttdata.client.domain.Client;
 import com.nttdata.client.infraestructure.model.dao.ClientDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +13,7 @@ import reactor.core.publisher.Mono;
 public class ClientOperationsImpl implements ClientOperations {
 
     @Autowired
-    ClientRespository repository;
+    ClientRepository repository;
 
     @Override
     public Mono<Client> create(Client client) {
